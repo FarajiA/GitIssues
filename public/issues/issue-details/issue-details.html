@@ -1,0 +1,29 @@
+﻿
+<div class="page-header details-header text-center">
+    <h1>Issue Details</h1>
+</div>
+<br />
+<state-loader force-show="vm.showLoader"></state-loader>
+<div class="row issue-details">
+    <div class="jumbotron" style="width:100%">
+        <div style="vertical-align: top;padding-right: 20px;">
+            <button type="button" class="btn btn-default" aria-label="Left Align" ng-click="vm.goBack()">
+                <span class="fa fa-chevron-left " aria-hidden="true"></span>
+            </button>
+        </div>
+        <div>
+            <h2>{{vm.issueDetails.title}}</h2>
+            <p>{{vm.issueDetails.state}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="row issue-detailSummary">
+    <div class="col-3">
+        <img class="avatar" src="{{vm.issueDetails.avatar}}" /><br />
+        <p>{{vm.issueDetails.username}}</p>
+    </div>
+    <div class="col-9">
+        <p>{{vm.issueDetails.summary}}</p>
+    </div>
+</div>

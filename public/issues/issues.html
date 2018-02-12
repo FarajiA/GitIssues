@@ -1,0 +1,67 @@
+﻿<div class="page-header text-center">
+    <h1>Ionic Open issues</h1>
+</div>
+<br/>
+<state-loader force-show="vm.showLoader"></state-loader>
+<div grid-data grid-options="vm.gridOptions" grid-actions="vm.gridActions">
+    <!-- sample table layout goes below, but remember that you can you any mark-up here. -->
+    <div class="row pagination-header">
+        <div class="col-md-8">
+            <uib-pagination class="pagination-sm" rotate="true" boundary-links="true"
+                            max-size="vm.maxPagesToDisplay"
+                            ng-if="vm.Repo.openissues  > vm.Repo.count"
+                            total-items="vm.Repo.openissues"
+                            num-pages="vm.Repo.numberOfPages"
+                            ng-model="vm.Repo.index"
+                            ng-change="vm.reloadGrid()"
+                            items-per-page="vm.Repo.count">
+            </uib-pagination>
+        </div>
+        <div class="col-md-4">
+            Items per page:
+            <select id="pageItems" class="select-pages form-control input-sm"
+                    ng-model="vm.Repo.count" ng-change="vm.reloadGrid()"
+                    ng-init="vm.Repo.count='25'"
+                    ng-options="o as o for o in vm.pagerOptions"></select>
+        </div>
+    </div>    
+    <table class="table">
+        <thead>
+            <tr>
+                <th sortable="code" class="sortable">
+                    #
+                </th>
+                <th sortable="placed" class="sortable">
+                    Title
+                </th>
+                <th class="sortable">
+                    Username
+                </th>
+                <th class="sortable">
+                    Gravatar
+                </th>
+                <th class="sortable">
+                    Summary
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr grid-item>
+                <td><a href="/details/{{item.id}}">{{item.id}}</a></td>
+                <td ng-bind="item.title"></td>
+                <td ng-bind="item.user"></td>
+                <td><img class="avatar" src="{{item.user_avatar}}" /></td>
+                <td ng-bind="item.body"></td>
+            </tr>
+        </tbody>
+    </table>
+    <uib-pagination class="pagination-sm" rotate="true" boundary-links="true"
+                    max-size="vm.maxPagesToDisplay"
+                    ng-if="vm.Repo.openissues  > vm.Repo.count"
+                    total-items="vm.Repo.openissues"
+                    num-pages="vm.Repo.numberOfPages"
+                    ng-model="vm.Repo.index"
+                    ng-change="vm.reloadGrid()"
+                    items-per-page="vm.Repo.count">
+    </uib-pagination>
+</div>

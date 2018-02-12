@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <base href="/" />
+    <title>GitIssues</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles/angular-state-loader.css" />
+</head>
+<body ng-app="gitApp">
+    <nav class="navbar navbar-expand-md navbar-dark bg-light">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" /></a>
+    </nav>
+    <div class="container">
+        <div ui-view></div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+    <script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0/angular-ui-router.js"></script>
+    <script src="https://angular-data-grid.github.io/dist/pagination.js"></script>
+    <script src="https://angular-data-grid.github.io/dist/JSONToCSVConvertor.js"></script>
+    <script src="https://angular-data-grid.github.io/dist/dataGrid.js"></script>
+    <script src="lib/angular-state-loader.js"></script>
+    <script src="_services/repoServices.js"></script>
+    <script src="_services/issuesServices.js"></script>
+    <script src="issues/issues.js"></script>
+    <script src="issues/issue-details/issue-details.js"></script>
+    <script src="app.js"></script>
+</body>
+
+
+</html>
