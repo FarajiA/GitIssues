@@ -5,7 +5,7 @@ To start locally, navigate to the working directory and<br/>
 - ````npm install````
 - ````npm start````<br/>
 
-Navigate to ````http://localhost:3000````
+If browser has not launched navigate to ````http://localhost:3000````
 
 ## Server ##
 **Node v8+**<br/>
