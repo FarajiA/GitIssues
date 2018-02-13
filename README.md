@@ -33,7 +33,7 @@ Navigate browser to ````http://localhost:3000````
   - Controller as implementation to avoid $scope var everytime in code
   - DI using $inject to overcome issues during bundling and minification
   
-* It's worth noting, I'm a huge fan of lazy loading modules as needed. Tools like [ocLazyLoad](https://github.com/ocombe/ocLazyLoad) are perfect for this. This way you're not loading scripts that may not be used through out the application.
+* It's worth noting, I'm a huge fan of lazy loading modules as needed. Tools like [ocLazyLoad](https://github.com/ocombe/ocLazyLoad) are perfect for this. This way you're not loading scripts that may not be used throughout the application.
 ![screenshotr4](https://user-images.githubusercontent.com/5041718/36172213-c2c4d452-10ca-11e8-9247-70d06b24a3b0.png)
 
 
