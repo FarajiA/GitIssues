@@ -4,7 +4,7 @@
         github: 'https://api.github.com/'
     };
 
-    config.OAuth = "81bab79250f1147181bc6cee412cb0275f3d9541";
+    config.OAuth = "086bf22fba2886d8b337553fb9c9ba41eb02a159";
     config.headers = {
             'Accept': '*/*',
             'User-Agent': 'NodeApp',
